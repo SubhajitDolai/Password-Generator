@@ -6,7 +6,7 @@ function App() {
   const [includeChar, setIncludeChar] = useState(false);
   const [password, setPassword] = useState();
 
-  // useRef hook
+  // useRef hook to get refrence of the input field
   const passwordRef = useRef(null);
 
 
@@ -19,9 +19,9 @@ function App() {
 
     // run a loop till length user selected and generate random password
     for (let i = 0; i < length; i++) {
-      let char = Math.floor(Math.random() * str.length + 1)
+      let randomChar = Math.floor(Math.random() * str.length + 1)
       // addend every char in the pass
-      pass += str.charAt(char)    // str.chatAt the random index of the str
+      pass += str.charAt(randomChar)    // str.chatAt the random index of the str
     }
 
     setPassword(pass)
